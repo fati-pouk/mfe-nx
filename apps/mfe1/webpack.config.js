@@ -5,7 +5,10 @@ const path = require("path");
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
   path.join(__dirname, '../../tsconfig.base.json'),
-  [/* mapped paths to share */]);
+  [
+    // todo: issue: if we add libs here, the apps not running anymore
+    // '@mfe-nx/auth'
+  ]);
 
 module.exports = {
   output: {
